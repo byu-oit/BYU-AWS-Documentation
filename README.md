@@ -1,22 +1,32 @@
 # BYU-AWS-Documentation
-Documentation for our AWS Account Structure as well as user guides and best practices.
 
-### Accessing BYU AWS
+## Contents
+- [Accessing BYU AWS](#)
+- [Regions to use](#)
+- [Taggging Standard](#)
+- [Compliance](#)
+- [Account Structure](#)
+- [Training Account](#)
+- [Service Control Policies](#stack-design)
+- [How to Create IAM Policies, Roles, and Users, with Permission Boundaries ](#deploy-script)
+- [Contact the Cloud Office](#adding-new-accounts)
 
-### Regions to use
+## Accessing BYU AWS
 
-### Taggging Standard
+## Regions to use
 
-### Compliance 
+## Taggging Standard
 
-### Account Structure
+## Compliance 
+
+## Account Structure
 ![Account Diagram](/images/accountStructure.png)
 ![VPC Diagram](/images/vpcDiagram.png)
 
-### Training Account
+## Training Account
 
-### Service Control Policies
+## Service Control Policies
 
-### How to Create IAM Policies, Roles, and Users, with Permission Boundaries 
+## How to Create IAM Policies, Roles, and Users, with Permission Boundaries 
 
-### Contact the Cloud Office
+## Contact the Cloud Office
