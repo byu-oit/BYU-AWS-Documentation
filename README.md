@@ -3,7 +3,7 @@
 ## Contents
 - [Accessing BYU AWS](#accessing-byu-aws)
 - [Regions to use](#regions-to-use)
-- [Taggging Standard](#tagging-standard)
+- [Tagging Standard](#tagging-standard)
 - [Compliance](#compliance)
 - [Account Structure](#account-structure)
 - [Training Account](#training-account)
@@ -15,7 +15,7 @@
 
 ## Regions to use
 
-## Taggging Standard
+## Tagging Standard
 
 ## Compliance 
 
