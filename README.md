@@ -9,7 +9,9 @@ Documentation for our AWS Account Structure as well as user guides and best prac
 
 ### Compliance 
 
-### Account Structure 
+### Account Structure
+![Account Diagram](https://byu.box.com/s/yqvjvdgm6siq2m9wm2bf1pkleqer7uzw)
+![VPC Diagram](https://byu.box.com/s/srsiz92gcb6940qhn5k21tjmi3e88waa)
 
 ### Training Account
 
