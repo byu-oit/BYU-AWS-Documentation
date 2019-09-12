@@ -1,7 +1,7 @@
 # BYU-AWS-Documentation
 Documentation for our AWS Account Structure as well as user guides and best practices.
 
-## Accessing BYU AWS
+### Accessing BYU AWS
 
 ### Regions to use
 
