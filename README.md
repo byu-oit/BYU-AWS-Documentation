@@ -2,14 +2,14 @@
 
 ## Contents
 - [Accessing BYU AWS](#accessing-byu-aws)
-- [Regions to use](#)
-- [Taggging Standard](#)
-- [Compliance](#)
-- [Account Structure](#)
-- [Training Account](#)
-- [Service Control Policies](#stack-design)
-- [How to Create IAM Policies, Roles, and Users, with Permission Boundaries ](#deploy-script)
-- [Contact the Cloud Office](#adding-new-accounts)
+- [Regions to use](#regions-to-use)
+- [Taggging Standard](#tagging-standard)
+- [Compliance](#compliance)
+- [Account Structure](#account-structure)
+- [Training Account](#training-account)
+- [Service Control Policies](#service-control-policies)
+- [Permission Boundaries](#permission-boundaries)
+- [Contact the Cloud Office](#contact-the-cloud-office)
 
 ## Accessing BYU AWS
 
@@ -27,6 +27,6 @@
 
 ## Service Control Policies
 
-## How to Create IAM Policies, Roles, and Users, with Permission Boundaries 
+## Permission Boundaries
 
 ## Contact the Cloud Office
