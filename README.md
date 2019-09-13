@@ -12,6 +12,10 @@
 - [Contact the Cloud Office](#contact-the-cloud-office)
 
 ## Accessing BYU AWS
+1. Go to awslogin.byu.edu
+2. Sign in with NetID and password.
+3. Authenticate with DUO (It is recommended that you have DUO automatically send you a push if you will be using the AWS CLI)
+
 
 ## Regions to use
 
