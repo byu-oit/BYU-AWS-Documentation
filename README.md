@@ -55,7 +55,7 @@ We implemented a tagging standard at BYU for organization and automation efforts
      
 * **repo:** URL of the source repository from which resource is being created with a format mimicking "https://github.com/byu-oit/byu-acs" or in other words "https://github.com/organization/repo".
 
-Each tag has an important purpose. Because of this tagging is enforced in all dev accounts see [Compliance](#compliance) for more information. While tagging is not enforced in production accounts slack alerts will be sent if your resources are not tagged correctly.
+Each tag has a critical purpose for our automation and compliance efforts. Because of this, tagging is enforced in all dev accounts see [Compliance](#compliance) for more information. While tagging is not enforced in production accounts slack alerts will be sent if your resources are not tagged correctly.
 
 ## Compliance 
 
@@ -63,11 +63,11 @@ Each tag has an important purpose. Because of this tagging is enforced in all de
 ![Account Diagram](/images/accountStructure.png)
 ![VPC Diagram](/images/vpcDiagram.png)
 
-# Training Account
+### Training Account
 
-# Development Accounts
+### Development Accounts
 
-# Production Accounts
+### Production Accounts
 
 ## Service Control Policies
 
