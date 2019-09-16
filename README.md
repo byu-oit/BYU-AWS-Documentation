@@ -59,6 +59,10 @@ Each tag has an important purpose. Because of this tagging is enforced in all de
 
 ## Training Account
 
+## Development Accounts
+
+## Production Accounts
+
 ## Service Control Policies
 
 ## Permission Boundaries
