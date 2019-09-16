@@ -34,18 +34,18 @@ It is a good idea to check what region you are in every time you log into the co
 We implemented a tagging standard at BYU for organization and automation efforts. The tagging standard is described below...
 
 **env:**
-  **trn:**
-  **dev-noshutdown:**
-  **tst:**
-  **stg:**
-  **stg-noshutdown:**
-  **prd:**
+      **trn:**
+      **dev-noshutdown:**
+      **tst:**
+      **stg:**
+      **stg-noshutdown:**
+      **prd:**
 **data-sensitivity:**
-    **public:**
-    **internal:**
-    **confidential (default):**
-    **highly confidential:**
-repo:
+      **public:**
+      **internal:**
+      **confidential (default):**
+      **highly confidential:**
+**repo:**
 
 Each tag has an important purpose. Because of this tagging is enforced in all dev accounts see [Compliance](#compliance) for more information. While tagging is not enforced in production accounts slack alerts will be sent if your resources are not tagged correctly.
 
