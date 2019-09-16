@@ -8,6 +8,8 @@
 - [Compliance](#compliance)
 - [Account Structure](#account-structure)
 - [Training Account](#training-account)
+- [Development Accounts](#development-accounts)
+- [Production Accounts](#production-accounts)
 - [Service Control Policies](#service-control-policies)
 - [Permission Boundaries](#permission-boundaries)
 - [Contact the Cloud Office](#contact-the-cloud-office)
@@ -34,8 +36,8 @@ It is a good idea to check what region you are in every time you log into the co
 We implemented a tagging standard at BYU for organization and automation efforts. The tagging standard is described below...
 
 **env:**
-      **trn:**
-      **dev-noshutdown:**
+      **trn:** For training, learning, or experimental efforts (should be used for the byu-trn account).
+      **dev-noshutdown:** A development system that should not be part of our off-hours scheduling.
       **tst:**
       **stg:**
       **stg-noshutdown:**
