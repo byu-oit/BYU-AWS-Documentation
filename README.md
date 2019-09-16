@@ -7,9 +7,9 @@
 - [Tagging Standard](#tagging-standard)
 - [Compliance](#compliance)
 - [Account Structure](#account-structure)
-- [Training Account](#training-account)
-- [Development Accounts](#development-accounts)
-- [Production Accounts](#production-accounts)
+    - [Training Account](#training-account)
+    - [Development Accounts](#development-accounts)
+    - [Production Accounts](#production-accounts)
 - [Service Control Policies](#service-control-policies)
 - [Permission Boundaries](#permission-boundaries)
 - [Contact the Cloud Office](#contact-the-cloud-office)
@@ -50,10 +50,10 @@ We implemented a tagging standard at BYU for organization and automation efforts
      * **confidential (default):** Information which requires special handling and controls specific to each work environment that limit access and use; and is considered by the University’s senior management to be private and confidential; and must be protected against unauthorized use, access, disclosure, acquisition, modification, loss, or deletion. Examples include: contracts, non-disclosure agreements, donor contact information. 
      * **highly confidential:** Information which requires the strictest rules of handling and usage; is protected and/or regulated by statutes, policies, or regulations; and may also include information for which an Information Trustee has exercised his or her right to restrict access. Examples include: social security numbers, medical records, passwords.
      
-Classification obtained from [University Information Claasification](https://infohub.byu.edu/resources/classification/summary).
+        Classification obtained from [University Information Classification](https://infohub.byu.edu/resources/classification/summary).
      
      
-* **repo:**
+* **repo:** URL of the source repository from which resource is being created with a format mimicking "https://github.com/byu-oit/byu-acs" or in other words "https://github.com/organization/repo".
 
 Each tag has an important purpose. Because of this tagging is enforced in all dev accounts see [Compliance](#compliance) for more information. While tagging is not enforced in production accounts slack alerts will be sent if your resources are not tagged correctly.
 
@@ -63,11 +63,11 @@ Each tag has an important purpose. Because of this tagging is enforced in all de
 ![Account Diagram](/images/accountStructure.png)
 ![VPC Diagram](/images/vpcDiagram.png)
 
-## Training Account
+# Training Account
 
-## Development Accounts
+# Development Accounts
 
-## Production Accounts
+# Production Accounts
 
 ## Service Control Policies
 
