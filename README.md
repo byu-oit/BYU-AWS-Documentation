@@ -38,15 +38,21 @@ We implemented a tagging standard at BYU for organization and automation efforts
 * **env:**
      * **trn:** For training, learning, or experimental efforts (should be used for the byu-trn account).
      * **dev-noshutdown:** A development system that should not be part of our off-hours scheduling.
-     * **tst:**
-     * **stg:**
-     * **stg-noshutdown:**
-     * **prd:**
+     * **tst:** Automated testing
+     * **stg:** Staging systems used for QA and User Acceptance Testing
+     * **stg-noshutdown:** A staging system that should not be part par of our off-hours scheduling.
+     * **prd:** Production
+     
+     
 * **data-sensitivity:**
-     * **public:**
-     * **internal:**
-     * **confidential (default):**
-     * **highly confidential:**
+     * **public:** Information which may, or must, be available to the public and has been formally approved for public release. Examples:include Course catalog, Directory, University stats.
+     * **internal:** Information which is generally accessible within the University to those employees with a legitimate university purpose; and must be protected against unauthorized use, access, disclosure, acquisition, modification, loss, or deletion. Examples include: organization charts, university policies, student records.
+     * **confidential (default):** Information which requires special handling and controls specific to each work environment that limit access and use; and is considered by the University’s senior management to be private and confidential; and must be protected against unauthorized use, access, disclosure, acquisition, modification, loss, or deletion. Examples include: contracts, non-disclosure agreements, donor contact information. 
+     * **highly confidential:** Information which requires the strictest rules of handling and usage; is protected and/or regulated by statutes, policies, or regulations; and may also include information for which an Information Trustee has exercised his or her right to restrict access. Examples include: social security numbers, medical records, passwords.
+     
+Classification obtained from [University Information Claasification](https://infohub.byu.edu/resources/classification/summary).
+     
+     
 * **repo:**
 
 Each tag has an important purpose. Because of this tagging is enforced in all dev accounts see [Compliance](#compliance) for more information. While tagging is not enforced in production accounts slack alerts will be sent if your resources are not tagged correctly.
