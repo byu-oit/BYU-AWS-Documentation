@@ -92,6 +92,8 @@ The following is an architecture diagram of what our VPCs look like.
 The following is an architecture diagram of what our account structure looks like.
 ![Account Diagram](/images/accountStructure.png)
 
+Diagrams created by Josh Gubler.
+
 Thank you for your patience as we move to this new structure. We believe that it will be a benefit to all involved and that the effort of moving will be worth it in the long run. If you have questions and concerns you can contact the [Cloud Office](#contact-the-cloud-office).
 
 ## Service Control Policies
