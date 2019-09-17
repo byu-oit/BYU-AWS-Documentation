@@ -7,9 +7,6 @@
 - [Tagging Standard](#tagging-standard)
 - [Compliance](#compliance)
 - [Account Structure](#account-structure)
-    - [Training Account](#training-account)
-    - [Development Accounts](#development-accounts)
-    - [Production Accounts](#production-accounts)
 - [Service Control Policies](#service-control-policies)
 - [Permission Boundaries](#permission-boundaries)
 - [Contact the Cloud Office](#contact-the-cloud-office)
@@ -83,14 +80,14 @@ Off-hours in development and training accounts
     * Prd accounts: A report will be sent to slack notifying that resources are not tagged appropriately.
 
 ## Account Structure
+
+As we have worked to improve the way we use AWS it became clear to use that the way we architected our accounts was not sustainable. In order to better use our resources as well as to simplify work for the Cloud Office as well as developers we restructured. If your account name begins with byu- you are part of the new account structure. Congrats! If you currently do not have an account in the new structure you can order one [here](https://it.byu.edu/it?id=sc_cat_item&sys_id=65d696fadb4bb7800d802c86059619be). From this point on any refrences to acccount architecture refer to the new account structure.
+
+Accounts are project or product based. Each production account will have an associated development account. Development account 
+
 ![Account Diagram](/images/accountStructure.png)
 ![VPC Diagram](/images/vpcDiagram.png)
 
-### Training Account
-
-### Development Accounts
-
-### Production Accounts
 
 ## Service Control Policies
 
