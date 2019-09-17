@@ -1,4 +1,5 @@
 # BYU-AWS-Documentation
+All documentation is in reference to the new account structure. 
 
 ## Contents
 - [Accessing BYU AWS Console](#accessing-byu-aws-console)
@@ -81,7 +82,7 @@ Off-hours in development and training accounts
 
 ## Account Structure
 
-As we have worked to improve the way we use AWS it became clear to use that the way we architected our accounts was not sustainable. In order to better use our resources as well as to simplify work for the Cloud Office as well as developers we restructured. If your account name begins with byu- you are part of the new account structure. Congrats! If you currently do not have an account in the new structure you can order one [here](https://it.byu.edu/it?id=sc_cat_item&sys_id=65d696fadb4bb7800d802c86059619be). From this point on any references acccount architecture will refer to the new account structure.
+As we have worked to improve the way we use AWS it became clear to use that the way we architected our accounts was not sustainable. In order to better use our resources as well as to simplify work for the Cloud Office as well as developers we restructured. If your account name begins with byu- you are part of the new account structure. Congrats! If you currently do not have an account in the new structure you can order one [here](https://it.byu.edu/it?id=sc_cat_item&sys_id=65d696fadb4bb7800d802c86059619be). All architecture discussed here is in reference to the new account structure.
 
 Accounts are project or product based. Each production account will have an associated development account. Development account 
 
