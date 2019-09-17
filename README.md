@@ -117,7 +117,7 @@ AWS has recently expanded its IAM capabilities with the release of a feature cal
 we can now give more IAM privileges to engineers with the exception that there is a boundary on those permissions.
 In practice this means that with the PowerUser role engineers can now create roles and policies themselves as long as they attach the iamRolePermissionBoundary policy.    Other benefits to the new Power User role include being able to create service roles and create and delete cloud formation stacks.
 
-For instructions on how to use permission boundaries click [here](/images/How to add a permission boundary to an IAM role.pdf).
+For instructions on how to use permission boundaries click [here](/images/permissionBoundaries.pdf).
 
 ## Contact the Cloud Office
 The Cloud Office is here to help you! We want our AWS accounts to enable you to do your work. If there are any policies mentioned above that do not work for your use case please contact us! If you have questions, concerns, or feedback please do not hesitate to reach out to the Cloud Office. 
