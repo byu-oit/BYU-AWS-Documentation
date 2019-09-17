@@ -77,7 +77,7 @@ Here are a list of compliance checks currently running in our AWS accounts:
 
 Approved and coming soon:
     * Off-hours in development and training accounts
-        * EC2 and RDS instances with the env tag set to "dev","stg", or "trn" will be turned off at 7pm and turned back on at 7 am. This is done to help minimize wasted cost. This will only be implemented in the byu-trn account and the byu- * -dev accounts. If your resource should not be turned off you can set your env tag to "dev-noshutdown" or "stg-noshutdown". 
+        * EC2 and RDS instances with the env tag set to "dev","stg", or "trn" will be turned off at 7pm and turned back on at 7 am. This is done to help minimize wasted cost. This will only be implemented in the byu-trn account and the byu-dev accounts. If your resource should not be turned off you can set your env tag to "dev-noshutdown" or "stg-noshutdown". 
     * Tagging Compliance: in order to help keep our accounts organized and also to prevent "junk" compliance checks will be run to make sure resources are tagged with the appropriate tags.
         * Dev and Trn accounts: resources that are not tagged correctly will be turned off.
         * Prd accounts: A report will be sent to slack notifying that resources are not tagged appropriately.
