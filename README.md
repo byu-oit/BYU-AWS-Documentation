@@ -113,6 +113,12 @@ These use cases are for general use. If you have a use case that needs the resou
 
 ## Permission Boundaries
 
+AWS has recently expanded its IAM capabilities with the release of a feature called Permissions Boundaries.   In the past we were forced to be overly restrictive on IAM privileges due to privilege escalation risk.   With permissions boundaries the idea is that
+we can now give more IAM privileges to engineers with the exception that there is a boundary on those permissions.
+In practice this means that with the PowerUser role engineers can now create roles and policies themselves as long as they attach the iamRolePermissionBoundary policy.    Other benefits to the new Power User role include being able to create service roles and create and delete cloud formation stacks.
+
+For instructions on how to use permission boundaries click [here](
+
 ## Contact the Cloud Office
 The Cloud Office is here to help you! We want our AWS accounts to enable you to do your work. If there are any policies mentioned above that do not work for your use case please contact us! If you have questions, concerns, or feedback please do not hesitate to reach out to the Cloud Office. 
 
