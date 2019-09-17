@@ -101,3 +101,10 @@ Thank you for your patience as we move to this new structure. We believe that it
 ## Permission Boundaries
 
 ## Contact the Cloud Office
+The Cloud Office is here to help you! We want our AWS accounts to enable you to do your work. If there are any policies mentioned above that do not work for your use case please contact us! If you have questions, concerns, or feedback please do not hesitate to to reach out to the Cloud Office. 
+
+You can contact the Cloud Office through byu-oit.slack.com in the #cloud-office channel, by @cloud-office in slack, or by emailing cloudoffice@byu.edu. A Cloud Office website will be coming soon. 
+
+If you have general aws questions or comments you can post through byu-oit.slack.com in the #aws channel.
+
+If you would like to get advice from other developers you can ask questions in the #aws-swat channel. 
