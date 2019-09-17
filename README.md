@@ -62,24 +62,24 @@ Each tag has a critical purpose for our automation and compliance efforts. Becau
 We use a tool called DivvyCloud to check against and remediate security threats as well as to manage compliance in our accounts. In order for an autoremediated action to go live in our AWS accounts a proposal must be made and approved. You can look at the approved proposals in this [box folder](https://byu.box.com/s/doojjaxqfmoe8jergsoi9s4st2ld4xho). 
 
 Here are a list of compliance checks currently running in our AWS accounts:
-    * Notify of EC2 instances that require patching.
-    * Notify of encryption keys without key rotation.
-    * Remediate against globally exposed ports (example SSH open to the world).
-    * Remediate if CloudTrail logging is disabled.
-    * Notify if network traffic logs are disabled.
-    * Notify if root access keys are created.
-    * Notify if multi-factor authentication is disabled on the account.
-    * Notify if there is a broken route in a route table.
-    * Remediate against publicly exposed S3 buckets (if the website flag is set on the public S3 bucket it will not be remediated).
-    * Notify if a sensitive data volume is not encrypted.
-    * Notify of stale keys for an IAM user.
-    * Notify if password policy for account is sub-standard. 
+* Notify of EC2 instances that require patching.
+* Notify of encryption keys without key rotation.
+* Remediate against globally exposed ports (example SSH open to the world).
+* Remediate if CloudTrail logging is disabled.
+* Notify if network traffic logs are disabled.
+* Notify if root access keys are created.
+* Notify if multi-factor authentication is disabled on the account.
+* Notify if there is a broken route in a route table.
+* Remediate against publicly exposed S3 buckets (if the website flag is set on the public S3 bucket it will not be remediated).
+* Notify if a sensitive data volume is not encrypted.
+* Notify of stale keys for an IAM user.
+* Notify if password policy for account is sub-standard. 
 
 Approved and coming soon:
-    * Off-hours in development and training accounts
-        * EC2 and RDS instances with the env tag set to "dev","stg", or "trn" will be turned off at 7pm and turned back on at 7 am. This is done to help minimize wasted cost. This will only be implemented in the byu-trn account and the byu-dev accounts. If your resource should not be turned off you can set your env tag to "dev-noshutdown" or "stg-noshutdown". 
-    * Tagging Compliance: in order to help keep our accounts organized and also to prevent "junk" compliance checks will be run to make sure resources are tagged with the appropriate tags.
-        * Dev and Trn accounts: resources that are not tagged correctly will be turned off.
+Off-hours in development and training accounts
+* EC2 and RDS instances with the env tag set to "dev","stg", or "trn" will be turned off at 7pm and turned back on at 7 am. This is done to help minimize wasted cost. This will only be implemented in the byu-trn account and the byu-dev accounts. If your resource should not be turned off you can set your env tag to "dev-noshutdown" or "stg-noshutdown". 
+* Tagging Compliance: in order to help keep our accounts organized and also to prevent "junk" compliance checks will be run to make sure resources are tagged with the appropriate tags.
+* Dev and Trn accounts: resources that are not tagged correctly will be turned off.
         * Prd accounts: A report will be sent to slack notifying that resources are not tagged appropriately.
 
 ## Account Structure
