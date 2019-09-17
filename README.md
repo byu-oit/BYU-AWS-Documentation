@@ -84,11 +84,15 @@ Off-hours in development and training accounts
 
 As we have worked to improve the way we use AWS it became clear to use that the way we architected our accounts was not sustainable. In order to better use our resources as well as to simplify work for the Cloud Office as well as developers we restructured. If your account name begins with byu- you are part of the new account structure. Congrats! If you currently do not have an account in the new structure you can order one [here](https://it.byu.edu/it?id=sc_cat_item&sys_id=65d696fadb4bb7800d802c86059619be). All architecture discussed here is in reference to the new account structure.
 
-Accounts are project or product based. Each production account will have an associated development account. Development account 
+Accounts are project or product based. Each production account will have an associated development account. A central VPC account will be maintained for VPCs for each use case. These VPCs are then shared to the associated account. This is a huge benefit as it allows VPCs to be managed from one location. It also allows us to manage less VPCs as a new VPC is not required for each account made.
 
-![Account Diagram](/images/accountStructure.png)
+The following is an architecture diagram of what our VPCs look like.
 ![VPC Diagram](/images/vpcDiagram.png)
 
+The following is an architecture diagram of what our account structure looks like.
+![Account Diagram](/images/accountStructure.png)
+
+Thank you for your patience as we move to this new structure. We believe that it will be a benefit to all involved and that the effort of moving will be worth it in the long run. If you have questions and concerns you can contact the [Cloud Office](#contact-the-cloud-office).
 
 ## Service Control Policies
 
