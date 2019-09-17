@@ -97,6 +97,19 @@ Diagrams created by Josh Gubler.
 Thank you for your patience as we move to this new structure. We believe that it will be a benefit to all involved and that the effort of moving will be worth it in the long run. If you have questions and concerns you can contact the [Cloud Office](#contact-the-cloud-office).
 
 ## Service Control Policies
+Service control policies are used in our accounts to restrict unsecure or costly behavior. You can read about SCPs [here](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html). The following SCPs have been implemented in our organization. 
+
+* Users not able to edit/create VPCs.
+* Deny disabling and deleting cloud trail logs.
+* Deny deletion of flow logs, log groups, and log streams.
+* Deny creation of resources in regions other than us-east-1 (Virginia) and us-west-2 (Oregon).
+* EC2 types whitelist (this is done to prevent excessively large and expensive instance types to be used without permission).
+* Deny Ground Station service (If you need a satellite contact the cloud office. But seriously, we would love to hear that use case).
+* Deny Cloud HSM.
+* Deny deletion of Route 53 hosted zone. 
+* Deny the creation of an IAM Login Profile. 
+
+These use cases are for general use. If you have a use case that needs the resources restricted by a SCP contact the [Cloud Office](#contact-the-cloud-office).
 
 ## Permission Boundaries
 
