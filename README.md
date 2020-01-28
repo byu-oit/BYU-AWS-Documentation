@@ -122,14 +122,14 @@ For instructions on how to use permission boundaries click [here](/images/permis
 
 ## Infrastructure as Code
 
-# Handel
+### Handel
 If you want to use handel or handel-codepipeline, you need to have an account configuration file at byu-oit/handel-account-configs.
 
 If your AWS resources need access to on-prem resources like OracleDB, be sure to use the identifiers for the VPCs, subnets, and subnet groups associated with the VPN (e.g. vpn-oit-oregon-dev instead of oit-oregon-dev).
 
 Also be sure to specify the permission_boundary.
 
-# Terraform
+### Terraform
 You can get started with Terraform using the documentation at byu-oit/terraform-documentation.
 
 ## Contact the Cloud Office
