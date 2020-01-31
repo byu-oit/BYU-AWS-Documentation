@@ -35,9 +35,9 @@ It is a good idea to check what region you are in every time you log into the co
 We implemented a tagging standard at BYU for organization and automation efforts. The tagging standard is described below...
 
 * **env:**
-     * **trn:** For training, learning, or experimental efforts (should be used for the byu-trn account).
+     * **tst:** For training, learning, or experimental efforts (should be used for the byu-trn account).
+     * **dev:** A development system.
      * **dev-noshutdown:** A development system that should not be part of our off-hours scheduling.
-     * **tst:** Automated testing
      * **stg:** Staging systems used for QA and User Acceptance Testing
      * **stg-noshutdown:** A staging system that should not be part par of our off-hours scheduling.
      * **prd:** Production
