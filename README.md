@@ -70,7 +70,7 @@ We implemented a tagging standard at BYU for organization and automation efforts
      
 * **repo:** URL of the source repository from which resource is being created with a format mimicking "https://github.com/byu-oit/byu-acs" or in other words "https://github.com/organization/repo".
 
-Each tag has a critical purpose for our automation and compliance efforts. Because of this, tagging is enforced in all dev accounts see [Compliance](#compliance) for more information. While tagging is not enforced in production accounts slack alerts will be sent if your resources are not tagged correctly.
+Each tag has a critical purpose for our automation and compliance efforts. Because of this, tagging is enforced in all dev accounts see [Compliance](#compliance) for more information. While tagging is not enforced in production accounts email alerts will be sent if your resources are not tagged correctly.
 
 ## Compliance 
 
@@ -95,7 +95,7 @@ Off-hours in development and training accounts
 * EC2 and RDS instances with the env tag set to "dev", "stg", or "trn" will be turned off at 7pm and turned back on at 7 am. This is done to help minimize wasted cost. This will only be implemented in the byu-trn account and the byu-dev accounts. If your resource should not be turned off you can set your env tag to "dev-noshutdown" or "stg-noshutdown". 
 * Tagging Compliance: in order to help keep our accounts organized and also to prevent "junk" compliance checks will be run to make sure resources are tagged with the appropriate tags.
     * Dev and trn accounts: resources that are not tagged correctly will be turned off.
-    * Prd accounts: A report will be sent to slack notifying that resources are not tagged appropriately.
+    * Prd accounts: A report will be sent to your email notifying that resources are not tagged appropriately.
 
 ## Account Structure
 
