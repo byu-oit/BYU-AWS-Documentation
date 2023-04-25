@@ -14,14 +14,30 @@ All documentation is in reference to the new account structure.
 - [Contact the Cloud Office](#contact-the-cloud-office)
 
 ## Accessing BYU AWS Console
-1. Go to awslogin.byu.edu
+1. Go to aws.byu.edu
 2. Sign in with NetID and password.
 3. Authenticate with DUO.
 
 ## Accessing BYU AWS CLI
-1. Download awslogin: https://github.com/byu-oit/awslogin.git
-2. Sign in with NetID and password.
-3. Authenticate with DUO (It is recommended that you have DUO automatically send you a push if you will be using the AWS CLI).
+To login from the command line, setup the __AWS CLI__
+  - Start at <https://aws.byu.edu>
+  - Click the account name you want to login to
+  - For each AWS account that exists you'll need to create a profile configuration in your .aws/config file. Each configuration should look like this, replacing `<AWS_ACCOUNT_NAME>` with the actual account name and `<AWS_ACCOUNT_ID>` with the actual account id. If you have multiple configurations then seperate them with an empty line.
+
+        [profile <AWS_ACCOUNT_NAME>]
+        sso_start_url = https://byulogin.awsapps.com/start
+        sso_region = us-west-2
+        sso_account_id = <AWS_ACCOUNT_ID>
+        sso_role_name = PowerUser-<AWS_ACCOUNT_ID>
+        region = us-west-2
+        output = json
+    - The config file is located at ~/.aws/config on Linux or macOS, or at C:\Users\USERNAME\.aws\config on Windows.    
+    - The `<AWS_ACCOUNT_NAME` is in blue, and normally follows the pattern `organization-project-environment` eg. `byu-lockerrental-dev`
+    - The `<AWS_ACCOUNT_ID>` is located under the account name eg. `#12345AWS_ACCOUNT_ID | AWS_ACCOUNT_NAME@cloud.byu.edu`
+  - Install the [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) 
+  - Run `aws sso login --profile=[my aws account name]` in the terminal
+
+Another tool, [AWS SSO Credentials Helper](https://www.npmjs.com/package/aws-sso-creds-helper), can be used with Node projects and IDEs. 
 
 ## Regions to use
 At BYU the primary AWS region that we develop in is us-west-2 or Oregon. If your use case requires it you may also develop in the us-east-1 or Virginia region. If you need access to a region outside of the two provided [contact the cloud office](#contact-the-cloud-office). We chose to use the Oregon region for shorter latency but also provide Virginia so that developers can take advantage of new releases by Amazon. 
@@ -114,20 +130,12 @@ These use cases are for general use. If you have a use case that needs the resou
 
 ## Permission Boundaries
 
-AWS has recently expanded its IAM capabilities with the release of a feature called Permissions Boundaries.   In the past we were forced to be overly restrictive on IAM privileges due to privilege escalation risk.   With permissions boundaries the idea is that
-we can now give more IAM privileges to engineers with the exception that there is a boundary on those permissions.
+AWS has recently expanded its IAM capabilities with the release of a feature called Permissions Boundaries.   In the past we were forced to be overly restrictive on IAM privileges due to privilege escalation risk.   With permissions boundaries the idea is that we can now give more IAM privileges to engineers with the exception that there is a boundary on those permissions.
 In practice this means that with the PowerUser role engineers can now create roles and policies themselves as long as they attach the iamRolePermissionBoundary policy.    Other benefits to the new Power User role include being able to create service roles and create and delete cloud formation stacks.
 
 For instructions on how to use permission boundaries click [here](/images/permissionBoundaries.pdf).
 
 ## Infrastructure as Code
-
-### Handel
-If you want to use [`handel`](https://github.com/byu-oit/handel) or [`handel-codepipeline`](https://github.com/byu-oit/handel-codepipeline), you need to have an account configuration file at [byu-oit/handel-account-configs](https://github.com/byu-oit/handel-account-configs).
-
-If your AWS resources need access to on-prem resources like OracleDB, be sure to use the identifiers for the VPCs, subnets, and subnet groups associated with the VPN (e.g. `vpn-oit-oregon-dev` instead of `oit-oregon-dev`).
-
-Also be sure to specify the `permission_boundary`.
 
 ### Terraform
 You can get started with [Terraform](https://github.com/hashicorp/terraform) using the documentation at [byu-oit/terraform-documentation](https://github.com/byu-oit/terraform-documentation).
@@ -135,6 +143,4 @@ You can get started with [Terraform](https://github.com/hashicorp/terraform) usi
 ## Contact the Cloud Office
 The Cloud Office is here to help you! We want our AWS accounts to enable you to do your work. If there are any policies mentioned above that do not work for your use case please contact us! If you have questions, concerns, or feedback please do not hesitate to reach out to the Cloud Office. 
 
-You can contact the Cloud Office through [byu-oit.slack.com](https://byu-oit.slack.com/) in the [#cloud-office](https://byu-oit.slack.com/archives/CLYKMDSKV) channel, by mentioning `@cloudoffice` in Slack, or by emailing [cloudoffice@byu.edu](mailto:cloudoffice@byu.edu).
-
-If you have general AWS questions or comments you can post through [byu-oit.slack.com](https://byu-oit.slack.com/) in the [#aws](https://byu-oit.slack.com/archives/C0QBU93QD) channel.
+You can contact the Cloud Office through [The CES AWS Channel in Teams](https://teams.microsoft.com/l/channel/19%3a39b53b673ba34a09bd54b8ff7e782823%40thread.tacv2/CES%2520AWS?groupId=54688770-069e-42a2-9f77-07cbb0306d01&tenantId=c6fc6e9b-51fb-48a8-b779-9ee564b40413) by mentioning `@cloud`, or by emailing [cloudoffice@byu.edu](mailto:cloudoffice@byu.edu).
