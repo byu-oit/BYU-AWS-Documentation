@@ -60,12 +60,45 @@ We implemented a tagging standard at BYU for organization and automation efforts
      
      
 * **data-sensitivity:**
-     * **public:** Information which may, or must, be available to the public and has been formally approved for public release. Examples include Course catalog, Directory, University stats.
-     * **internal:** Information which is generally accessible within the University to those employees with a legitimate university purpose; and must be protected against unauthorized use, access, disclosure, acquisition, modification, loss, or deletion. Examples include: organization charts, university policies, student records.
-     * **confidential:** Information which requires special handling and controls specific to each work environment that limit access and use; and is considered by the University’s senior management to be private and confidential; and must be protected against unauthorized use, access, disclosure, acquisition, modification, loss, or deletion. Examples include: contracts, non-disclosure agreements, donor contact information.  **(This is the default classification)**
-     * **highly confidential:** Information which requires the strictest rules of handling and usage; is protected and/or regulated by statutes, policies, or regulations; and may also include information for which an Information Trustee has exercised his or her right to restrict access. Examples include: social security numbers, medical records, passwords.
-     
-        Classification obtained from [University Information Classification](https://infohub.byu.edu/resources/classification/summary).
+     * **public:**  Information approved for public release that should be protected against loss or change. 
+        <details><summary>Examples</summary>
+
+          * Course catalog 
+          * University calendar dates 
+          * University department names and department contact information
+        </details>
+     * **internal:** Moderately sensitive information which is generally accessible within the University to those with a legitimate university purpose and is not intended for entities or persons outside the University.
+       <details><summary>Examples</summary>
+       
+        * Student records
+        * Employee contact information
+        * Organization charts
+       </details>
+
+     * **confidential:** Highly sensitive information where an inappropriate loss, changes, or disclosure could have substantial consequences to the University.
+        * Substantial consequences include:
+            * Information disclosure that may be used to steal money from the University.
+            * Disclosure of personal information that could lead to identity theft or monetary loss for a small set of individuals, representing a breach of professional expectations by the University.
+            * Serious violation of regulatory requirements. 
+       <details><summary>Examples</summary>
+            
+        * Employee salary or performance information
+        * Employment action reasons
+        * Credit cardholder name and contact information
+       </details>
+     * **restricted:** Information of the highest sensitivity where inappropriate loss, changes, or disclosure could have grave consequences to the University. 
+       * Grave consequences include:
+         * Information disclosure that may be used to steal money from others who have entrusted the University with their information, including students, donors, employees, and other patrons. 
+         * Exposure of a significantly large amount of personal information that may result in significant fines or regulatory violations. 
+         * Disclosure of information that would put the school, employees, students, alumni, other patrons, or their families in physical danger.
+       <details><summary>Examples</summary>
+
+        * Social Security Number
+        * Credit card number
+        * Personal medical records
+       </details>
+       
+    Classification obtained from [CES Information Classification](https://cesig.byu.edu/)
      
      
 * **repo:** URL of the source repository from which resource is being created with a format mimicking "https://github.com/byu-oit/byu-acs" or in other words "https://github.com/organization/repo".
