@@ -1,5 +1,5 @@
 # BYU-AWS-Documentation
-All documentation is in reference to the new account structure. 
+All documentation is in reference to the new account structure.
 
 ## Contents
 - [Accessing BYU AWS Console](#accessing-byu-aws-console)
@@ -31,16 +31,16 @@ To login from the command line, setup the __AWS CLI__
         sso_role_name = PowerUser-<AWS_ACCOUNT_ID>
         region = us-west-2
         output = json
-    - The config file is located at ~/.aws/config on Linux or macOS, or at C:\Users\USERNAME\.aws\config on Windows.    
+    - The config file is located at ~/.aws/config on Linux or macOS, or at C:\Users\USERNAME\.aws\config on Windows.
     - The `<AWS_ACCOUNT_NAME` is in blue, and normally follows the pattern `organization-project-environment` eg. `byu-lockerrental-dev`
     - The `<AWS_ACCOUNT_ID>` is located under the account name eg. `#12345AWS_ACCOUNT_ID | AWS_ACCOUNT_NAME@cloud.byu.edu`
-  - Install the [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) 
+  - Install the [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
   - Run `aws sso login --profile=[my aws account name]` in the terminal
 
-Another tool, [AWS SSO Credentials Helper](https://www.npmjs.com/package/aws-sso-creds-helper), can be used with Node projects and IDEs. 
+Another tool, [AWS SSO Credentials Helper](https://www.npmjs.com/package/aws-sso-creds-helper), can be used with Node projects and IDEs.
 
 ## Regions to use
-At BYU the primary AWS region that we develop in is us-west-2 or Oregon. If your use case requires it you may also develop in the us-east-1 or Virginia region. If you need access to a region outside of the two provided [contact the cloud office](#contact-the-cloud-office). We chose to use the Oregon region for shorter latency but also provide Virginia so that developers can take advantage of new releases by Amazon. 
+At BYU the primary AWS region that we develop in is us-west-2 or Oregon. If your use case requires it you may also develop in the us-east-1 or Virginia region. If you need access to a region outside of the two provided [contact the cloud office](#contact-the-cloud-office). We chose to use the Oregon region for shorter latency but also provide Virginia so that developers can take advantage of new releases by Amazon.
 
 AWS logs you into a random region upon your first login. To change the region in the console go to the top right hand corner of the page and select the region dropdown. In the CLI you specify a default region in the AWS CLI using either the aws configure command or the AWS_DEFAULT_REGION environment variable. For more information, see [Configuring the AWS Region](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-installing-specifying-region) in the AWS Command Line Interface User Guide.
 
@@ -57,19 +57,19 @@ We implemented a tagging standard at BYU for organization and automation efforts
      * **stg:** Staging systems used for QA and User Acceptance Testing
      * **stg-noshutdown:** A staging system that should not be part par of our off-hours scheduling.
      * **prd:** Production
-     
-     
+
+
 * **data-sensitivity:**
-     * **public:**  Information approved for public release that should be protected against loss or change. 
+     * **public:**  Information approved for public release that should be protected against loss or change.
         <details><summary>Examples</summary>
 
-          * Course catalog 
-          * University calendar dates 
+          * Course catalog
+          * University calendar dates
           * University department names and department contact information
         </details>
      * **internal:** Moderately sensitive information which is generally accessible within the University to those with a legitimate university purpose and is not intended for entities or persons outside the University.
        <details><summary>Examples</summary>
-       
+
         * Student records
         * Employee contact information
         * Organization charts
@@ -79,17 +79,17 @@ We implemented a tagging standard at BYU for organization and automation efforts
         * Substantial consequences include:
             * Information disclosure that may be used to steal money from the University.
             * Disclosure of personal information that could lead to identity theft or monetary loss for a small set of individuals, representing a breach of professional expectations by the University.
-            * Serious violation of regulatory requirements. 
+            * Serious violation of regulatory requirements.
        <details><summary>Examples</summary>
-            
+
         * Employee salary or performance information
         * Employment action reasons
         * Credit cardholder name and contact information
        </details>
-     * **restricted:** Information of the highest sensitivity where inappropriate loss, changes, or disclosure could have grave consequences to the University. 
+     * **restricted:** Information of the highest sensitivity where inappropriate loss, changes, or disclosure could have grave consequences to the University.
        * Grave consequences include:
-         * Information disclosure that may be used to steal money from others who have entrusted the University with their information, including students, donors, employees, and other patrons. 
-         * Exposure of a significantly large amount of personal information that may result in significant fines or regulatory violations. 
+         * Information disclosure that may be used to steal money from others who have entrusted the University with their information, including students, donors, employees, and other patrons.
+         * Exposure of a significantly large amount of personal information that may result in significant fines or regulatory violations.
          * Disclosure of information that would put the school, employees, students, alumni, other patrons, or their families in physical danger.
        <details><summary>Examples</summary>
 
@@ -97,17 +97,17 @@ We implemented a tagging standard at BYU for organization and automation efforts
         * Credit card number
         * Personal medical records
        </details>
-       
+
     Classification obtained from [CES Information Classification](https://cesig.byu.edu/)
-     
-     
+
+
 * **repo:** URL of the source repository from which resource is being created with a format mimicking "https://github.com/byu-oit/byu-acs" or in other words "https://github.com/organization/repo".
 
 Each tag has a critical purpose for our automation and compliance efforts. Because of this, tagging is enforced in all dev accounts see [Compliance](#compliance) for more information. While tagging is not enforced in production accounts email alerts will be sent if your resources are not tagged correctly.
 
-## Compliance 
+## Compliance
 
-We use a tool called DivvyCloud to check against and remediate security threats as well as to manage compliance in our accounts. In order for an auto remediated action to go live in our AWS accounts a proposal must be made and approved. You can look at the approved proposals in this [box folder](https://byu.box.com/s/doojjaxqfmoe8jergsoi9s4st2ld4xho). 
+We use a tool called DivvyCloud to check against and remediate security threats as well as to manage compliance in our accounts. In order for an auto remediated action to go live in our AWS accounts a proposal must be made and approved. You can look at the approved proposals in this [box folder](https://byu.box.com/s/doojjaxqfmoe8jergsoi9s4st2ld4xho).
 
 Here are a list of compliance checks currently running in our AWS accounts:
 * Notify of EC2 instances that require patching.
@@ -121,11 +121,11 @@ Here are a list of compliance checks currently running in our AWS accounts:
 * Remediate against publicly exposed S3 buckets (if the website flag is set on the public S3 bucket it will not be remediated).
 * Notify if a sensitive data volume is not encrypted.
 * Notify of stale keys for an IAM user.
-* Notify if password policy for account is sub-standard. 
+* Notify if password policy for account is sub-standard.
 
 Approved and coming soon:
 Off-hours in development and training accounts
-* EC2 and RDS instances with the env tag set to "dev", "stg", or "trn" will be turned off at 7pm and turned back on at 7 am. This is done to help minimize wasted cost. This will only be implemented in the byu-trn account and the byu-dev accounts. If your resource should not be turned off you can set your env tag to "dev-noshutdown" or "stg-noshutdown". 
+* EC2 and RDS instances with the env tag set to "dev", "stg", or "trn" will be turned off at 7pm and turned back on at 7 am. This is done to help minimize wasted cost. This will only be implemented in the byu-trn account and the byu-dev accounts. If your resource should not be turned off you can set your env tag to "dev-noshutdown" or "stg-noshutdown".
 * Tagging Compliance: in order to help keep our accounts organized and also to prevent "junk" compliance checks will be run to make sure resources are tagged with the appropriate tags.
     * Dev and trn accounts: resources that are not tagged correctly will be turned off.
     * Prd accounts: A report will be sent to your email notifying that resources are not tagged appropriately.
@@ -147,7 +147,7 @@ Diagrams created by Josh Gubler.
 Thank you for your patience as we move to this new structure. We believe that it will be a benefit to all involved and that the effort of moving will be worth it in the long run. If you have questions and concerns you can contact the [Cloud Office](#contact-the-cloud-office).
 
 ## Service Control Policies
-Service control policies are used in our accounts to restrict unsecure or costly behavior. You can read about SCPs [here](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html). The following SCPs have been implemented in our organization. 
+Service control policies are used in our accounts to restrict unsecure or costly behavior. You can read about SCPs [here](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html). The following SCPs have been implemented in our organization.
 
 * Users not able to edit/create VPCs.
 * Deny disabling and deleting cloud trail logs.
@@ -156,8 +156,8 @@ Service control policies are used in our accounts to restrict unsecure or costly
 * EC2 types whitelist (this is done to prevent excessively large and expensive instance types to be used without permission).
 * Deny Ground Station service (If you need a satellite contact the cloud office. But seriously, we would love to hear that use case).
 * Deny Cloud HSM.
-* Deny deletion of Route 53 hosted zone. 
-* Deny the creation of an IAM Login Profile. 
+* Deny deletion of Route 53 hosted zone.
+* Deny the creation of an IAM Login Profile.
 
 These use cases are for general use. If you have a use case that needs the resources restricted by a SCP contact the [Cloud Office](#contact-the-cloud-office).
 
@@ -174,6 +174,6 @@ For instructions on how to use permission boundaries click [here](/images/permis
 You can get started with [Terraform](https://github.com/hashicorp/terraform) using the documentation at [byu-oit/terraform-documentation](https://github.com/byu-oit/terraform-documentation).
 
 ## Contact the Cloud Office
-The Cloud Office is here to help you! We want our AWS accounts to enable you to do your work. If there are any policies mentioned above that do not work for your use case please contact us! If you have questions, concerns, or feedback please do not hesitate to reach out to the Cloud Office. 
+The Cloud Office is here to help you! We want our AWS accounts to enable you to do your work. If there are any policies mentioned above that do not work for your use case please contact us! If you have questions, concerns, or feedback please do not hesitate to reach out to the Cloud Office.
 
 You can contact the Cloud Office through [The CES AWS Channel in Teams](https://teams.microsoft.com/l/channel/19%3a39b53b673ba34a09bd54b8ff7e782823%40thread.tacv2/CES%2520AWS?groupId=54688770-069e-42a2-9f77-07cbb0306d01&tenantId=c6fc6e9b-51fb-48a8-b779-9ee564b40413) by mentioning `@cloud`, or by emailing [cloudoffice@byu.edu](mailto:cloudoffice@byu.edu).
