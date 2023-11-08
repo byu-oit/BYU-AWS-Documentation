@@ -102,6 +102,8 @@ We implemented a tagging standard at BYU for organization and automation efforts
 
 * **repo:** URL of the source repository from which resource is being created with a format mimicking "https://github.com/byu-oit/byu-acs" or in other words "https://github.com/organization/repo".
 
+* **cmdb-application-service:** OIT resources should be tagged with the `Number` of an Application Service from the CMDB. For example, `APPSV0001337`. Here is the [list of possible values](https://support.byu.edu/now/nav/ui/classic/params/target/cmdb_ci_service_auto_list.do). (You might need to edit the list view to display the `Number` column.)
+
 Each tag has a critical purpose for our automation and compliance efforts. Because of this, tagging is enforced in all dev accounts see [Compliance](#compliance) for more information. While tagging is not enforced in production accounts email alerts will be sent if your resources are not tagged correctly.
 
 ## Compliance
